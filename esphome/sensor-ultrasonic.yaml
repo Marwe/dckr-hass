@@ -3,6 +3,7 @@
 
 sensor:
   - platform: ultrasonic
-    trigger_pin: D7
-    echo_pin: D8
+    trigger_pin: D8 # D8 is output only
+    echo_pin: D7
     name: "Ultrasonic Sensor"
+    update_interval: ${measureinterval_us}

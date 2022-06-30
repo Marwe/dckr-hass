@@ -10,6 +10,6 @@ substitutions:
   measureinterval_us: 60s
 
 <<: !include baseconfig-esp8266.yaml
+#<<: !include sensor-bme280.yaml
 <<: !include sensor-ultrasonic.yaml
-<<: !include sensor-bme280.yaml
 

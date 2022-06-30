@@ -93,7 +93,7 @@ Found multiple options, please choose one:
 After flashing the firmware you can see the log with
 
 ```bash
-esphome -s devicenumber 01 -s measureinterval 5s environment-bme280-00.yaml logs
+esphome -s devicenumber 01 -s measureinterval_bme 5s environment-bme280-00.yaml logs
 ```
 
 and you get a nice log like:

@@ -6,7 +6,7 @@ substitutions:
   devicenumber: "00"
   deviceid: "environment-${deviceboard}-${devicenumber}"
   devicename: "Environment ${deviceboard} ${devicenumber}"
-  measureinterval: 60s
+  measureinterval_bme: 60s
 
 <<: !include baseconfig-esp8266.yaml
 <<: !include sensor-bme280.yaml

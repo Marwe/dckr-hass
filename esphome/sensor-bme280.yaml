@@ -18,6 +18,6 @@ sensor:
     humidity:
       name: "BME280 Humidity"
     address: 0x76
-    update_interval: ${measureinterval}
+    update_interval: ${measureinterval_bme}
 
 
