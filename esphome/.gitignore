@@ -1,0 +1,5 @@
+secrets*
+.pioenvs/
+.esphome/
+environment-*/
+powerswitch-s20-*/
