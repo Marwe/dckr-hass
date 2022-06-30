@@ -3,7 +3,7 @@
 esphome:
   name: ${deviceid}
   platform: ESP8266
-  board: nodemcuv2
+  board: ${deviceboard}
   arduino_version: platformio/espressif8266@2.6.2
   platformio_options: {}
   esp8266_restore_from_flash: false
@@ -65,24 +65,3 @@ ota:
 time:
   - platform: homeassistant
     id: homeassistant_time
-
-i2c:
-  sda: GPIO4 # GPIO4=D2
-  scl: GPIO5 # GPIO5=D1
-  scan: true
-  id: bus_a
-
-sensor:
-  - platform: bme280
-    i2c_id: bus_a
-    temperature:
-      name: "BME280 Temperature"
-      oversampling: 16x
-    pressure:
-      name: "BME280 Pressure"
-    humidity:
-      name: "BME280 Humidity"
-    address: 0x76
-    update_interval: ${measureinterval}
-
-

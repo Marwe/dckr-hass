@@ -2,9 +2,11 @@
 # to change a value on command line compile with substitution option -s 
 # esphome -s devicenumber 03 sonoff-s20-powerswitch-00.yaml
 substitutions:
+  deviceboard: "esp01_1m"
   devicenumber: "00"
   deviceid: "powerswitch-s20-${devicenumber}"
   devicename: "S20 Switch ${devicenumber}"
 
+<<: !include baseconfig-esp8266.yaml
 <<: !include sonoff-s20-powerswitch.yaml
 

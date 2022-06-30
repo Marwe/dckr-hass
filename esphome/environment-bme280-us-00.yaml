@@ -2,12 +2,13 @@
 # to change a value on command line compile with substitution option -s 
 # esphome -s devicenumber 03 environment-bme280-00.yaml
 substitutions:
-  deviceboard: "nodemcuv2"
+  deviceboard: nodemcuv2
   devicenumber: "00"
   deviceid: "environment-${deviceboard}-${devicenumber}"
   devicename: "Environment ${deviceboard} ${devicenumber}"
   measureinterval: 60s
 
 <<: !include baseconfig-esp8266.yaml
-<<: !include sensor-bme280.yaml
+<<: !include environment-bme280.yaml
+<<: !include sensor-ultrasonic.yaml
 
