@@ -1,0 +1,15 @@
+---
+# to change a value on command line compile with substitution option -s 
+# esphome -s devicenumber 08 -s tdsname "DS18 Demo" -s measureinterval_bme 5s  environment-ds-00.yaml
+substitutions:
+  deviceboard: "nodemcuv2"
+  devicenumber: "00"
+  deviceid: "environment-${deviceboard}-${devicenumber}"
+  devicename: "Environment ${deviceboard} ${devicenumber}"
+  tdsname: "DS18 Sensor"
+  #tdsaddress: 0x51031561E38DFF28 # get your adress from log after flashing
+  measureinterval_bme: 60s
+
+<<: !include baseconfig-esp8266.yaml
+<<: !include sensor-t-ds.yaml
+

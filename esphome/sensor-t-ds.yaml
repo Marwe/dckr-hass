@@ -1,0 +1,12 @@
+# ds18b20 
+dallas:
+  - pin: GPIO2 # D4
+
+# one sensor
+sensor:
+  - platform: dallas
+    name: "Temperature ${tdsname}"
+    #address: ${tdsaddress}
+    index: 0 # first sensor
+    filters:
+        - filter_out: 85
