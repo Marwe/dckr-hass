@@ -5,7 +5,8 @@
 
 * official documentation: https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-container
 
-* Pi4 docker-compose file: [docker-compose-pi4.yml](docker-compose-pi4.yml)
+* Pi4 may need a patch (backported libseccomp2), see [patch-rpi4-libseccomp2.sh](patch-rpi4-libseccomp2.sh)
+    * Pi4 docker-compose file: [docker-compose-pi4.yml](docker-compose-pi4.yml)
 * config/ dir will contain config, db etc, config files are excluded from git by `.gitignore` and `config/.gitignore`
 
 start HASS on Pi4 via
@@ -31,4 +32,26 @@ You may want an MQTT Service running on the device, too: `apt install mosquitto 
 # esphome
 
 See [esphome/README.md](esphome/README.md) for details and code.
+
+## Extensions
+
+mkdir -p config/custom_compopents/
+
+## Tapo
+
+* https://github.com/petretiandrea/home-assistant-tapo-p100.git
+* via HACS
+
+## HACS
+
+* follow https://hacs.xyz/docs/setup/download
+
+```bash
+pushd ~/docker/dckr-hass# # parent of config/custom_compopents/
+wget https://get.hacs.xyz -O install_hacs.sh
+chmod a+x install_hacs.sh
+./install_hacs.sh
+```
+
+
 
