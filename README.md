@@ -9,3 +9,31 @@
     * Pi4 docker-compose file: [docker-compose-pi4.yml](docker-compose-pi4.yml)
 * config/ dir will contain config, db etc, config files are excluded from git by `.gitignore` and `config/.gitignore`
 
+
+```bash
+docker-compose -f docker-compose-pi4.yml up -d
+#docker-compse -f docker-compose-pi4.yml down
+```
+
+## Extensions
+
+mkdir -p config/custom_compopents/
+
+## Tapo
+
+* https://github.com/petretiandrea/home-assistant-tapo-p100.git
+* via HACS
+
+## HACS
+
+* follow https://hacs.xyz/docs/setup/download
+
+```bash
+pushd ~/docker/dckr-hass# # parent of config/custom_compopents/
+wget https://get.hacs.xyz -O install_hacs.sh
+chmod a+x install_hacs.sh
+./install_hacs.sh
+```
+
+
+
